@@ -1,0 +1,245 @@
+.backdrop{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+
+    background-color: $modal-bg-color;
+
+    transition: opacity 250ms $animation-time;
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
+    padding: 15px;
+
+    background-color: $primary-white-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal__title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $primary-text-color;
+
+}
+
+.modal__list{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+
+
+.modal__input{
+    width: 100%;
+    margin: 0;
+    margin-top: 4px;
+    padding: 12px;
+    padding-left: 42px;
+    outline: none;
+
+    border: 1px solid $placeholder-color;
+    border-radius: 4px;
+
+    transition: border-color 250ms $animation-time;
+        
+    .modal__list &:focus-within{
+    border-color: $acent-color;
+    }
+
+    .modal__list &::placeholder{
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: $placeholder-color;
+    }
+}
+
+
+.modal__item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 448px;
+    height: 40px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: $secondary-text-color;
+   &:not(:last-child){
+    margin-bottom: 28px;
+    }
+}
+
+.modal__icon{
+    position: absolute;
+    bottom: -6px;
+    left: 15px;
+    width: 18px;
+    height: 18px;
+         
+.modal__item:focus-within > &{
+    fill: $acent-color;
+    }
+}
+
+
+
+.modal__button{
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+
+    color: $primary-white-color;
+    background-color: $acent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border:none;
+}
+
+.modal__textarea{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    resize: none;
+    margin: 0;
+    margin-bottom: 28px;
+    
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: $secondary-text-color;
+    border-radius: 4px;
+}
+
+
+.modal__comment{
+    display: block;
+    width: 448px;
+    height: 120px;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    margin-top: 4px;
+    padding: 16px 12px;
+    resize: none;
+    outline: none;
+
+    color: $placeholder-color;
+
+    border: 1px solid $placeholder-color;
+    border-radius: 4px;
+
+    transition: border-color 250ms $animation-time;
+}
+
+.modal__comment:focus-within{
+    border-color: $acent-color;
+}
+
+.modal__checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: $secondary-text-color;
+
+}
+
+.modal__checkbox-item{
+    appearance: none;
+    position: absolute;
+}
+
+.modal__checkbox-icon{
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+
+    border: 2px solid $primary-text-color;
+    border-radius: 4px;
+} 
+
+.modal__checkbox-item:checked + .modal__checkbox-icon{
+    background-origin: border-box;
+    background-color: $acent-color;
+    background-image: url(../../images/icons/icon_check.svg);
+    background-size: contain;
+    border-color: $acent-color;
+}
+
+.modal__checkbox-link{
+    margin-left: 6px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $acent-color;
+}
+
+.modal__close-button{
+    position: absolute;
+    top:8px;
+    right: 8px;
+
+    width: 30px;
+    height: 30px;
+    background-color: $primary-white-color;
+    color: $primary-text-color;
+
+    border-radius:50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: fill 250ms $animation-time;
+}
+.modal__close-button:hover,
+.modal__close-button:focus{
+    fill: $acent-color;
+}
+.modal__icon-cross{
+    width: 11px;
+    height: 11px;
+}
+/* END modal-window */

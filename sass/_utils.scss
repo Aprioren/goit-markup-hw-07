@@ -1,0 +1,93 @@
+// body
+body{
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+}
+
+//  container
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+// visualy hidden
+.visual-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+// thumb
+    
+.thumb{
+    position: relative;
+    overflow: hidden;
+}
+
+// social-media-icons
+
+.list-of-socialmedia{
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.list-of-socialmedia__item{
+    list-style: none;
+    width: 44px;
+    height: 44px;
+
+    &:not(:last-child){
+    margin-right: 10px;
+    }
+}
+
+.list-of-socialmedia__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+
+    color: $clients-border-color;
+    transition: background-color 250ms $animation-time,
+    color 250ms $animation-time;
+
+    &:hover,
+    &:focus{
+    background-color: $acent-color;
+    color: $primary-white-color;
+    }
+}
+
+.list-of-socialmedia__icon{
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+// list 
+
+.list{
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}

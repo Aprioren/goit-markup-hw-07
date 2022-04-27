@@ -1,0 +1,36 @@
+// our-projects
+.our-projects__title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.our-projects__item{
+    position: relative;
+}
+
+.our-projects__overlay{
+    position: absolute;
+    bottom: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: $overlay-bg-color;
+}
+
+.our-projects__text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+}
+// END our-projects
